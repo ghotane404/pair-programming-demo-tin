@@ -1,27 +1,20 @@
 package com.pluralsight.contract;
 
-public class Contract
+public abstract class Contract
 {
     private String date;
     private String customerName;
     private String customerEmail;
     private String vehicleSold;
-    private double totalPrice;
-    private double monthlyPayment;
 
-    public Contract(String date,
-                    String customerName,
-                    String customerEmail,
-                    String vehicleSold,
-                    double totalPrice,
-                    double monthlyPayment)
+
+    public Contract(String date, String customerName, String customerEmail,
+                    String vehicleSold, double totalPrice, double monthlyPayment)
     {
         this.date = date;
         this.customerName = customerName;
         this.customerEmail = customerEmail;
         this.vehicleSold = vehicleSold;
-        this.totalPrice = totalPrice;
-        this.monthlyPayment = monthlyPayment;
     }
 
     public String getDate()
@@ -64,14 +57,13 @@ public class Contract
         this.vehicleSold = vehicleSold;
     }
 
-    public double getTotalPrice()
-    {
-        return totalPrice;
+    // pg. 53
+    // now child classes *MUST* override this method
+    //    public abstract double getValue();
 
-    }
+//    You should define abstract methods for getTotalPrice() and
+//    getMonthlyPayment() that will return computed values based on contract type.
+    public abstract double getTotalPrice();
 
-    public double getMonthlyPayment()
-    {
-        return monthlyPayment;
-    }
+    public abstract double getMonthlyPayment();
 }
