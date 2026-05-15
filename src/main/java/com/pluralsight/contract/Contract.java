@@ -64,6 +64,5 @@ public abstract class Contract
 //    You should define abstract methods for getTotalPrice() and
 //    getMonthlyPayment() that will return computed values based on contract type.
     public abstract double getTotalPrice();
-
     public abstract double getMonthlyPayment();
 }

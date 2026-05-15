@@ -76,8 +76,6 @@ public class DealershipFileManager
 
     public static void saveDealership(Dealership dealership)
     {
-
-
         try(FileWriter fileWriter = new FileWriter("data/inventory.csv");
             PrintWriter writer = new PrintWriter(fileWriter))
         {
@@ -88,7 +86,7 @@ public class DealershipFileManager
 
             for(Vehicle vehicle : dealership.getAllVehicles())
             {
-                writer.printf("%d|%d|%s|%s|%s|%s|%d|%f.2\n",
+                writer.printf("%d|%d|%s|%s|%s|%s|%d|%.2f\n",
                         vehicle.getVin(),
                         vehicle.getYear(),
                         vehicle.getMake(),
@@ -99,12 +97,10 @@ public class DealershipFileManager
                         vehicle.getPrice()
                 );
             }
-
         }
         catch(IOException e)
         {
             //swallow
         }
-
     }
 }
