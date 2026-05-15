@@ -1,6 +1,8 @@
 package com.pluralsight;
 
 import com.pluralsight.application.DealershipApplication;
+import com.pluralsight.contract.LeaseContract;
+import com.pluralsight.contract.SalesContract;
 import com.pluralsight.models.Dealership;
 import com.pluralsight.io.DealershipFileManager;
 

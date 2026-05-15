@@ -1,6 +1,6 @@
 package com.pluralsight.contract;
 
-public class Contract
+public abstract class Contract
 {
     private String date;
     private String customerName;
@@ -64,14 +64,7 @@ public class Contract
         this.vehicleSold = vehicleSold;
     }
 
-    public double getTotalPrice()
-    {
-        return totalPrice;
+    public abstract double getTotalPrice();
 
-    }
-
-    public double getMonthlyPayment()
-    {
-        return monthlyPayment;
-    }
+    public abstract double getMonthlyPayment();
 }
