@@ -1,4 +1,4 @@
-package com.pluralsight.contract;
+package com.pluralsight.models;
 
 public abstract class SalesContract extends Contract
 {
@@ -25,9 +25,9 @@ public abstract class SalesContract extends Contract
 //    Methods will include a constructor and getters and setters for all fields except total
 //    price and monthly payment.
 
-//    • Monthly payment (if financed) based on:
-//        • All loans are at 4.25% for 48 months if the price is $10,000 or more
-//        • Otherwise they are at 5.25% for 24 month
+//    Monthly payment (if financed) based on:
+//        All loans are at 4.25% for 48 months if the price is $10,000 or more
+//        Otherwise they are at 5.25% for 24 month
     // if carPrice > $10,000
     // loan = 48 months
     // loanRate = 4.25%
@@ -40,6 +40,7 @@ public abstract class SalesContract extends Contract
 //    return computed values based on the rules above.
 
 //    It is possible that getMonthlyPayment() would return 0 if they chose the NO loan option.
+
     @Override
     public double getTotalPrice()
     {

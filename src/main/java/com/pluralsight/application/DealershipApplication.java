@@ -44,6 +44,9 @@ public class DealershipApplication
                 case 7:
                     addVehicle();
                     break;
+//                case 8:
+//                    buyOrSellVehicle();
+//                    break;
                 case 0:
                     UserInterface.endApplication();
                     System.exit(0);

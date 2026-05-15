@@ -1,4 +1,4 @@
-package com.pluralsight.contract;
+package com.pluralsight.models;
 
 public class LeaseContract extends Contract
 {
@@ -7,10 +7,16 @@ public class LeaseContract extends Contract
     final private static double LEASE_INTEREST_RATE = .04;  // All leases are financed at 4.0% for 36 months
     final private static int LEASE_MONTHS = 36;     // 36 months
 
+    private double totalPrice;
+    private double monthlyPayment;
+
     public LeaseContract(String date, String customerName, String customerEmail,
                          String vehicleSold, double totalPrice, double monthlyPayment)
     {
         super(date, customerName, customerEmail, vehicleSold, totalPrice, monthlyPayment);
+
+        this.totalPrice = totalPrice;
+        this.monthlyPayment = monthlyPayment;
     }
 
 //    Methods will include a constructor and getters and setters for all fields except total
@@ -20,12 +26,12 @@ public class LeaseContract extends Contract
 //    that will return computed values based on the rules above.
     @Override
     public double getTotalPrice() {
-        return 0;
+        return totalPrice;
     }
 
     @Override
     public double getMonthlyPayment() {
-        return 0;
+        return monthlyPayment;
     }
 
 }

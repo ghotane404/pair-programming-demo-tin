@@ -1,4 +1,4 @@
-package com.pluralsight.contract;
+package com.pluralsight.models;
 
 public abstract class Contract
 {
