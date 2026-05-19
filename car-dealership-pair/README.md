@@ -4,4 +4,4 @@
 
 <h3> Author: Gregor Dzierzon </h3>
 <h3>Co-Author: Damarrius Thompson</h3>
-<h3>Co-Author: Melissa Ghotane</h3>
+<h3>Co-Author: Ghotane</h3>
